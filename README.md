@@ -6,11 +6,12 @@
 ## 使用方法
 环境要求 python3.7  
 1.下载并解压  
-2.将自己的cookie复制到douyu_roomcheckin.py的第88行cookie处（cookie的获取方法不会请百度）  
+2.pip3 install -r ../requirement.txt  
+3.将自己的cookie复制到douyu_roomcheckin.py的第88行cookie处（cookie的获取方法不会请百度）  
 ```
 cookies=''
 ```
-3.python3 douyu_roomcheckin.py  
+4.python3 douyu_roomcheckin.py  
 ## 设计思路
 这个脚本最初的目的只是为了学习反混淆，结果自己太菜，只能换了思路解决了问题，但js的反混淆还是没有进步，如有大佬有空，可以指点一下  
 最初是看到鱼吧很多人在秀自己的签到手速榜，在想可不可以做个脚本自己动，于是开始了学习之旅。  

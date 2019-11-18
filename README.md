@@ -31,26 +31,6 @@ pass掉油猴脚本后，开始解决前面遇到的2个问题：
 **web签到的问题已经解决**  
 感谢油猴脚本[斗鱼自动搜火力+发AI弹幕+极速签到=抢鱼丸红包沙发神器(日进2W丸子，有图为证)](https://greasyfork.org/zh-CN/scripts/389379-斗鱼自动搜火力-发ai弹幕-极速签到-抢鱼丸红包沙发神器-日进2w丸子-有图为证)带来的关于ctn参数的解决方案：  
 ctn的value是cookie中的一个参数acf_ccn,由于我在自己cookie中没有发现这个ccn，油猴脚本中acf_ccn同样是构造得来。  
-js代码：  
-```
-function guid() {
-        return 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'.replace(/[x]/g, function (c) {
-            var r = Math.random() * 16 | 0,
-                v = c == 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        });
-    }
-```  
-python代码  
-```
-import random
-def getccn():
-	li ='0123456789abcdef'
-	acf_ccn=''
-	for i in range(32):
-		acf_ccn+=str(random.choice(li))
-	return acf_ccn
-```
 当然web端签到需要加上cookie，同时cookie中也要包含acf_ccn，具体实现代码我也没写，相比于手机端签到构造token确实少了很多，有兴趣的可以自己写一下。  
 ### 3.0 手机端签到
 因为第二个问题实在没有结果，心有不甘，开始尝试对手机端进行抓包分析，很幸运的是在房间签到这块斗鱼并没有做到二次证书加密，顺利找到了签到接口，最开始觉得希望不大，后来发现接口和web端并不一样。  

@@ -7,7 +7,7 @@
 环境要求 python3.7  
 1.下载并解压  
 2.pip3 install -r ../requirement.txt  
-3.将自己的cookie复制到douyu_roomcheckin.py的第88行cookie处（cookie的获取方法不会请百度）  
+3.将自己的cookie复制到douyu_roomcheckin.py的cookie处（cookie的获取方法不会请百度）  
 ```
 cookies=''
 ```
